@@ -20,7 +20,7 @@ export default function Home() {
               AngelHacks
             </span>
             <br />
-            <span className="text-[#f8bb9f] text-5xl">Bay Area Satelite</span>
+            <span className="text-[#ffcfb9] text-5xl">Bay Area Satelite</span>
           </p>
         </div>
         <div className={"absolute bottom-0  w-full overflow-hidden"}>
