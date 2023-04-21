@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scale: {
+        flip: "-1",
+      },
       colors: {
         angelyellow: "#ffb400",
       },

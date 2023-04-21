@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Nunito } from "next/font/google";
 import Logo from "../../public/assets/logo.svg";
 import Clouds from "../../public/assets/background/clouds.svg";
-import Bridge from "../../public/assets/background/bridge.svg";
+import Bridge from "../../public/assets/background/golden.svg";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -11,16 +11,16 @@ export default function Home() {
     <main className={"min-h-screen pb-12 bg-white"}>
       <Image
         src={Bridge}
-        className="w-5/12 opacity-70 absolute right-0 -mb-4 bottom-0 "
+        className="w-screen absolute right-0 z-0 bottom-0 scale-x-flip "
         alt="bridge"
       />
-      <div className=" bg-gradient-to-b -z-20 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
+      <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
         <div
           className={
-            "z-0 pt-12  sm:pl-12 flex justify-center items-center sm:justify-start sm:items-start "
+            "pt-12 sm:px-12 flex justify-center items-center sm:justify-start sm:items-start "
           }
         >
-          <div className="sm:text-left text-center p-4 lg:px-16">
+          <div className="z-20 sm:bg-[#9ed5f5] bg-transparent  sm:text-left text-center  rounded-xl sm:shadow-xl sm:border-black sm:border-8  p-12 lg:px-16">
             <div>
               <div className="mb-6 flex justify-center items-center sm:justify-start sm:items-start">
                 <Image src={Logo} alt="angelhacks logo" className="w-1/4 " />
