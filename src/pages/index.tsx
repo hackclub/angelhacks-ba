@@ -11,7 +11,7 @@ export default function Home() {
     <main className={"  bg-white "}>
       <Image
         src={Bridge}
-        className="w-screen  absolute z-0 bottom-0 fill-amber-300 "
+        className="w-screen sm:opacity-100 opacity-50 absolute z-0 bottom-0 fill-amber-300 "
         alt="bridge"
       />
       <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen">
@@ -20,7 +20,7 @@ export default function Home() {
             "pt-4 md:pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
           }
         >
-          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-2 xs:p-12 lg:px-16">
+          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-0 xs:p-2 sm:p-12 lg:px-16">
             <div>
               <div className="mb-6 flex justify-center items-center md:justify-start md:items-start">
                 <Image src={Logo} alt="angelhacks logo" className="w-1/4 " />
@@ -48,16 +48,17 @@ export default function Home() {
 
             <p
               className={
-                nunito.className + " mt-8  font-semibold text-xl xs:text-2xl "
+                nunito.className +
+                " mt-8  font-semibold text-xl xs:text-2xl md:text-3xl"
               }
             >
               May 27-28, 2023, 9AM-9PM <br />
-              <span className="text-xl">Address</span>
+              <span className="">Address</span>
             </p>
             <p
               className={
                 nunito.className +
-                " mt-8 mb-12  font-bold text-2xl xs:text-3xl "
+                " mt-8 mb-12  font-bold text-2xl xs:text-3xl md:text-4xl "
               }
             >
               Design, create, and ship your own game!
@@ -88,9 +89,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={"absolute bottom-0  "}>
-          <Image src={Clouds} alt="logo" priority className="w-screen" />
-        </div>
+        <Image
+          src={Clouds}
+          alt="logo"
+          priority
+          className="absolute bottom-0 w-screen"
+        />
       </div>
       <div className="mt-16 pb-16   text-center md:text-left px-0  lg:px-32">
         <div className="flex justify-center items-center">
