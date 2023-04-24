@@ -115,8 +115,8 @@ export default function Home() {
               <span className="text-[#c99212]">eating food</span>!
             </p>
             <p className="mt-4">
-              It doesn't matter whether you&apos;re a seasoned veteran, or a
-              complete beginner, we&apos;ll love for you to come and hang out!
+              It doesn&apos;t matter whether you&apos;re a seasoned veteran, or
+              a complete beginner, we&apos;ll love for you to come and hang out!
             </p>
             <p className={nunito.className + " mt-4"}>
               AngelHacks BA is a Game Jam organized by people just like you!
