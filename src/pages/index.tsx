@@ -8,19 +8,34 @@ import HC from "../../public/assets/background/flag-orpheus-left.svg";
 const nunito = Nunito({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <main className={"   "}>
-      <div className="relative  bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-fit pb-32">
+    <>
+      <div className="relative  bg-gradient-to-b  from-[#8eddfd] to-[#a4d3f3] min-h-screen pb-72 h-fit">
         <Image
           src={Bridge}
-          className="w-screen sm:opacity-100 opacity-50 absolute z-0 bottom-0 fill-amber-300 "
+          className="w-screen  sm:opacity-100 opacity-50 absolute z-0 bottom-0 fill-amber-300 "
           alt="bridge"
         />
+        <div className="flex justify-start items-start">
+          <a
+            href="https://hackclub.com"
+            target="_blank"
+            className=" w-fit h-fit z-20"
+            rel="noreferrer"
+          >
+            <Image
+              src={HC}
+              className="hover:rotate-6   hover:translate-y-3 motion-safe:transition-transform w-32 lg:w-48"
+              alt="hack club!"
+            />
+          </a>
+        </div>
+
         <div
           className={
             "pt-4 md:pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
           }
         >
-          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-0 xs:p-2 sm:p-12 lg:px-16">
+          <div className="z-20  md:bg-[#9ed5f5] bg-transparent  md:text-left text-center   rounded-xl md:shadow-xl md:border-black md:border-8  p-0 xs:p-2 sm:p-12 lg:px-16">
             <div>
               <div className="mb-6 flex justify-center items-center md:justify-start md:items-start">
                 <Image src={Logo} alt="angelhacks logo" className="w-1/4 " />
@@ -53,7 +68,7 @@ export default function Home() {
               }
             >
               May 27-28, 2023, 9AM-9PM <br />
-              <span className="">Address</span>
+              <span className="">Address TBD</span>
             </p>
             <p
               className={
@@ -64,8 +79,8 @@ export default function Home() {
               Design, create, and ship your own game!
             </p>
             <div className="flex justify-center items-center md:justify-start md:items-start">
-              <div className="group hover:scale-105 duration-200 hover:cursor-pointer ">
-                <div className="group-hover:translate-y-1 transition ease-in-out duration-300">
+              <div className="group  hover:scale-105 duration-200 hover:cursor-pointer ">
+                <div className="group-hover:translate-y-1 motion-safe:transition-transform transition ease-in-out duration-300">
                   <a
                     className={
                       nunito.className +
@@ -79,7 +94,7 @@ export default function Home() {
                   <a
                     className={
                       nunito.className +
-                      " font-extrabold relative text-3xl xs:text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
+                      "  font-extrabold relative text-3xl xs:text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
                     }
                   >
                     Join us!
@@ -153,6 +168,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }
