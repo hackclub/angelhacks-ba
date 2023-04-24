@@ -8,19 +8,19 @@ import HC from "../../public/assets/background/flag-orpheus-left.svg";
 const nunito = Nunito({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <main className={"min-h-screen pb-12 bg-white "}>
+    <main className={"  bg-white "}>
       <Image
         src={Bridge}
-        className="w-screen  absolute right-0 z-0 bottom-0 fill-amber-300 "
+        className="w-screen  absolute z-0 bottom-0 fill-amber-300 "
         alt="bridge"
       />
-      <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
+      <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen">
         <div
           className={
-            "pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
+            "pt-4 md:pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
           }
         >
-          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-12 lg:px-16">
+          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-2 xs:p-12 lg:px-16">
             <div>
               <div className="mb-6 flex justify-center items-center md:justify-start md:items-start">
                 <Image src={Logo} alt="angelhacks logo" className="w-1/4 " />
@@ -39,21 +39,25 @@ export default function Home() {
               <p
                 className={
                   nunito.className +
-                  " font-extrabold uppercase mt-2 text-[#de865e] text-3xl md:text-5xl"
+                  " font-extrabold uppercase mt-2 text-[#de865e] text-2xl xs:text-3xl md:text-5xl"
                 }
               >
                 Bay Area
               </p>
             </div>
 
-            <p className={nunito.className + " mt-8  font-semibold text-2xl "}>
+            <p
+              className={
+                nunito.className + " mt-8  font-semibold text-xl xs:text-2xl "
+              }
+            >
               May 27-28, 2023, 9AM-9PM <br />
               <span className="text-xl">Address</span>
             </p>
             <p
               className={
                 nunito.className +
-                " mt-8 mb-12  font-bold text-2xl xs:htext-3xl "
+                " mt-8 mb-12  font-bold text-2xl xs:text-3xl "
               }
             >
               Design, create, and ship your own game!
@@ -64,17 +68,17 @@ export default function Home() {
                   <a
                     className={
                       nunito.className +
-                      " font-extrabold text-4xl -ml-2 px-12 md:px-24 py-2 relative bg-black rounded-xl  border-black border-2"
+                      " font-extrabold text-3xl xs:text-4xl -ml-2 px-12 md:px-24 py-2 relative bg-black rounded-xl  border-black border-2"
                     }
                   >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </a>
                 </div>
-                <div className=" -mt-12">
+                <div className=" xs:-mt-12 -mt-11">
                   <a
                     className={
                       nunito.className +
-                      " font-extrabold relative text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
+                      " font-extrabold relative text-3xl xs:text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
                     }
                   >
                     Join us!
@@ -84,11 +88,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={"absolute bottom-0  -mb-5 right-0 left-0 "}>
+        <div className={"absolute bottom-0  "}>
           <Image src={Clouds} alt="logo" priority className="w-screen" />
         </div>
       </div>
-      <div className="mt-16  text-center md:text-left px-0 md:px-8 md:px-16 lg:px-32">
+      <div className="mt-16 pb-16   text-center md:text-left px-0  lg:px-32">
         <div className="flex justify-center items-center">
           <div
             className={
