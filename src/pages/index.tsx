@@ -8,13 +8,13 @@ import HC from "../../public/assets/background/flag-orpheus-left.svg";
 const nunito = Nunito({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <main className={"  bg-white "}>
-      <Image
-        src={Bridge}
-        className="w-screen sm:opacity-100 opacity-50 absolute z-0 bottom-0 fill-amber-300 "
-        alt="bridge"
-      />
-      <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen">
+    <main className={"   "}>
+      <div className="relative  bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-fit pb-32">
+        <Image
+          src={Bridge}
+          className="w-screen sm:opacity-100 opacity-50 absolute z-0 bottom-0 fill-amber-300 "
+          alt="bridge"
+        />
         <div
           className={
             "pt-4 md:pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
