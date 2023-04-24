@@ -1,17 +1,19 @@
 import Image from "next/image";
-import { Nunito } from "next/font/google";
+import { Nunito, Press_Start_2P } from "next/font/google";
 import Logo from "../../public/assets/logo.svg";
 import Clouds from "../../public/assets/background/clouds.svg";
 import Bridge from "../../public/assets/background/golden.svg";
+import HC from "../../public/assets/background/flag-orpheus-left.svg";
 
 const nunito = Nunito({ subsets: ["latin"] });
+const pixel = Press_Start_2P({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
   return (
     <main className={"min-h-screen pb-12 bg-white"}>
       <Image
         src={Bridge}
-        className="w-screen absolute right-0 z-0 bottom-0 scale-x-flip "
+        className="w-screen absolute right-0 z-0 bottom-0 fill-amber-300 "
         alt="bridge"
       />
       <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
@@ -56,7 +58,7 @@ export default function Home() {
               Design, create, and ship your own game!
             </p>
             <div className="flex justify-center items-center sm:justify-start sm:items-start">
-              <div className="group hover:cursor-pointer ">
+              <div className="group hover:scale-105 duration-200 hover:cursor-pointer ">
                 <div className="group-hover:translate-y-1 transition ease-in-out duration-300">
                   <a
                     className={
@@ -85,14 +87,60 @@ export default function Home() {
           <Image src={Clouds} alt="logo" priority className="w-screen " />
         </div>
       </div>
-      <div className="text-center mt-16">
-        <p
+      <div className="mt-16  text-center sm:text-left sm:px-32">
+        <div className="flex justify-center items-center">
+          <div
+            className={
+              nunito.className +
+              " text-5xl p-4  text-center w-fit font-extrabold text-[#0291a0]"
+            }
+          >
+            <span className="text-8xl">🕹️</span>
+            <p className="mt-4">The Rundown</p>
+          </div>
+        </div>
+        <br />
+
+        <div
           className={
-            nunito.className + " text-6xl font-extrabold text-[#ffb400]"
+            nunito.className +
+            "text-center flex justify-center items-center sm:text-2xl text-xl px-4"
           }
         >
-          It's a Game Jam!
-        </p>
+          <div className="sm:w-1/2 ">
+            <p className={nunito.className}>
+              Come with us for a day of{" "}
+              <span className="text-[#c99212]">building games</span>,{" "}
+              <span className="text-[#c99212]">meeting new people</span>, and{" "}
+              <span className="text-[#c99212]">eating food</span>!
+            </p>
+            <p className="mt-4">
+              It doesn't matter whether you&apos;re a seasoned veteran, or a
+              complete beginner, we&apos;ll love for you to come and hang out!
+            </p>
+            <p className={nunito.className + " mt-4"}>
+              AngelHacks BA is a Game Jam organized by people just like you!
+              Come help us out in the{" "}
+              <a
+                href="https://hackclub.slack.com/archives/C051MQSF970"
+                target={"_blank"}
+                rel="noreferrer"
+                className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+              >
+                #angelhacks-ba
+              </a>{" "}
+              channel in the{" "}
+              <a
+                href="https://hackclub.com/slack/"
+                target={"_blank"}
+                rel="noreferrer"
+                className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+              >
+                Hack Club Slack
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );
