@@ -1,13 +1,11 @@
 import Image from "next/image";
-import { Nunito, Press_Start_2P } from "next/font/google";
+import { Nunito } from "next/font/google";
 import Logo from "../../public/assets/logo.svg";
 import Clouds from "../../public/assets/background/clouds.svg";
 import Bridge from "../../public/assets/background/golden.svg";
 import HC from "../../public/assets/background/flag-orpheus-left.svg";
 
 const nunito = Nunito({ subsets: ["latin"] });
-const pixel = Press_Start_2P({ subsets: ["latin"], weight: ["400"] });
-
 export default function Home() {
   return (
     <main className={"min-h-screen pb-12 bg-white "}>
@@ -19,19 +17,19 @@ export default function Home() {
       <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
         <div
           className={
-            "xs:pt-12 sm:px-12 flex justify-center items-center sm:justify-start sm:items-start "
+            "pt-12 md:px-12 flex justify-center items-center md:justify-start md:items-start "
           }
         >
-          <div className="z-20 sm:bg-[#9ed5f5] bg-transparent  sm:text-left text-center  rounded-xl sm:shadow-xl sm:border-black sm:border-8  p-12 lg:px-16">
+          <div className="z-20 md:bg-[#9ed5f5] bg-transparent  md:text-left text-center  rounded-xl md:shadow-xl md:border-black md:border-8  p-12 lg:px-16">
             <div>
-              <div className="mb-6 flex justify-center items-center sm:justify-start sm:items-start">
+              <div className="mb-6 flex justify-center items-center md:justify-start md:items-start">
                 <Image src={Logo} alt="angelhacks logo" className="w-1/4 " />
               </div>
 
               <p
                 className={
                   nunito.className +
-                  " text-[#0291a0] text-5xl xs:text-6xl sm:text-7xl font-extrabold"
+                  " text-[#0291a0] text-5xl xs:text-6xl md:text-7xl font-extrabold"
                 }
               >
                 Angel
@@ -41,7 +39,7 @@ export default function Home() {
               <p
                 className={
                   nunito.className +
-                  " font-extrabold uppercase mt-2 text-[#de865e] text-3xl sm:text-5xl"
+                  " font-extrabold uppercase mt-2 text-[#de865e] text-3xl md:text-5xl"
                 }
               >
                 Bay Area
@@ -60,13 +58,13 @@ export default function Home() {
             >
               Design, create, and ship your own game!
             </p>
-            <div className="flex justify-center items-center sm:justify-start sm:items-start">
+            <div className="flex justify-center items-center md:justify-start md:items-start">
               <div className="group hover:scale-105 duration-200 hover:cursor-pointer ">
                 <div className="group-hover:translate-y-1 transition ease-in-out duration-300">
                   <a
                     className={
                       nunito.className +
-                      "font-extrabold text-4xl -ml-2 px-12 sm:px-24 py-2 relative bg-black rounded-xl  border-black border-2"
+                      " font-extrabold text-4xl -ml-2 px-12 md:px-24 py-2 relative bg-black rounded-xl  border-black border-2"
                     }
                   >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -76,7 +74,7 @@ export default function Home() {
                   <a
                     className={
                       nunito.className +
-                      " font-extrabold relative text-4xl px-12 sm:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
+                      " font-extrabold relative text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
                     }
                   >
                     Join us!
@@ -90,7 +88,7 @@ export default function Home() {
           <Image src={Clouds} alt="logo" priority className="w-screen" />
         </div>
       </div>
-      <div className="mt-16  text-center sm:text-left sm:px-32">
+      <div className="mt-16  text-center md:text-left px-0 md:px-8 md:px-16 lg:px-32">
         <div className="flex justify-center items-center">
           <div
             className={
@@ -107,14 +105,16 @@ export default function Home() {
         <div
           className={
             nunito.className +
-            "text-center flex justify-center items-center sm:text-2xl text-xl px-4"
+            "text-center flex justify-center items-center md:text-2xl text-xl px-4"
           }
         >
-          <div className="sm:w-1/2 ">
+          <div className={nunito.className + " font-semibold md:w-1/2"}>
             <p className={nunito.className}>
               Come with us for a day of{" "}
-              <span className="text-[#c99212]">building games</span>,{" "}
-              <span className="text-[#c99212]">meeting new people</span>, and{" "}
+              <span className={nunito.className + "  text-[#c99212]"}>
+                building games
+              </span>
+              , <span className="text-[#c99212]">meeting new people</span>, and{" "}
               <span className="text-[#c99212]">eating food</span>!
             </p>
             <p className="mt-4">
