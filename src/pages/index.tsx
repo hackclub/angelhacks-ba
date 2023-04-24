@@ -10,16 +10,16 @@ const pixel = Press_Start_2P({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
   return (
-    <main className={"min-h-screen pb-12 bg-white"}>
+    <main className={"min-h-screen pb-12 bg-white "}>
       <Image
         src={Bridge}
-        className="w-screen absolute right-0 z-0 bottom-0 fill-amber-300 "
+        className="w-screen  absolute right-0 z-0 bottom-0 fill-amber-300 "
         alt="bridge"
       />
       <div className=" bg-gradient-to-b -z-10 from-[#8eddfd] to-[#a4d3f3]  h-screen ">
         <div
           className={
-            "pt-12 sm:px-12 flex justify-center items-center sm:justify-start sm:items-start "
+            "xs:pt-12 sm:px-12 flex justify-center items-center sm:justify-start sm:items-start "
           }
         >
           <div className="z-20 sm:bg-[#9ed5f5] bg-transparent  sm:text-left text-center  rounded-xl sm:shadow-xl sm:border-black sm:border-8  p-12 lg:px-16">
@@ -31,7 +31,7 @@ export default function Home() {
               <p
                 className={
                   nunito.className +
-                  " text-[#0291a0] text-6xl sm:text-7xl font-extrabold"
+                  " text-[#0291a0] text-5xl xs:text-6xl sm:text-7xl font-extrabold"
                 }
               >
                 Angel
@@ -41,7 +41,7 @@ export default function Home() {
               <p
                 className={
                   nunito.className +
-                  " font-extrabold uppercase mt-2 text-[#de865e] text-4xl sm:text-5xl"
+                  " font-extrabold uppercase mt-2 text-[#de865e] text-3xl sm:text-5xl"
                 }
               >
                 Bay Area
@@ -53,7 +53,10 @@ export default function Home() {
               <span className="text-xl">Address</span>
             </p>
             <p
-              className={nunito.className + " mt-8 mb-12  font-bold text-3xl "}
+              className={
+                nunito.className +
+                " mt-8 mb-12  font-bold text-2xl xs:htext-3xl "
+              }
             >
               Design, create, and ship your own game!
             </p>
@@ -63,17 +66,17 @@ export default function Home() {
                   <a
                     className={
                       nunito.className +
-                      "font-extrabold text-4xl -ml-2 px-24 py-2 relative bg-black rounded-xl  border-black border-2"
+                      "font-extrabold text-4xl -ml-2 px-12 sm:px-24 py-2 relative bg-black rounded-xl  border-black border-2"
                     }
                   >
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </a>
                 </div>
-                <div className="-mt-12">
+                <div className=" -mt-12">
                   <a
                     className={
                       nunito.className +
-                      " font-extrabold relative text-4xl px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
+                      " font-extrabold relative text-4xl px-12 sm:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
                     }
                   >
                     Join us!
@@ -83,8 +86,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={"absolute bottom-0  overflow-hidden"}>
-          <Image src={Clouds} alt="logo" priority className="w-screen " />
+        <div className={"absolute bottom-0  -mb-5 right-0 left-0 "}>
+          <Image src={Clouds} alt="logo" priority className="w-screen" />
         </div>
       </div>
       <div className="mt-16  text-center sm:text-left sm:px-32">
