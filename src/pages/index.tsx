@@ -333,7 +333,8 @@ export default function Home() {
         </div>
         <div
           className={
-            nunito.className + " mt-24 text-center text-gray-500  text-2xl"
+            nunito.className +
+            " mt-24 text-center text-gray-500 mx-2 text-xl lg:text-2xl"
           }
         >
           AngelHacks BA is an event crafted by Hack Clubbers.
