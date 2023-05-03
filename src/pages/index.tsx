@@ -9,7 +9,13 @@ import Panda from "../../public/assets/images/panda.svg";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
-function FAQCard({ question, answer }: { question: string; answer: string }) {
+function FAQCard({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string | JSX.Element;
+}) {
   return (
     <div className="p-6 bg-opacity-40 border-4 border-[#433b6b]  rounded-xl">
       <div
@@ -37,8 +43,9 @@ function FAQCard({ question, answer }: { question: string; answer: string }) {
 
       <div
         className={nunito.className + " text-black md:text-2xl text-xl mt-4"}
-        dangerouslySetInnerHTML={{ __html: answer }}
-      ></div>
+      >
+        {answer}
+      </div>
     </div>
   );
 }
@@ -104,7 +111,18 @@ export default function Home() {
               }
             >
               May 27, 2023, 9AM-9PM <br />
-              <span className="">Address TBD</span>
+              <a
+                href="https://goo.gl/maps/FRfrKTBMkVu2dMww9"
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-dashed decoration-[#0291a0] hover:decoration-[#1cacbc]"
+              >
+                <span className="">Tully Branch Library Community Room</span>
+                <br />
+                <span className="text-lg xs:text-xl md:text-2xl text-gray-700">
+                  880 Tully Rd, San Jose, CA 95111
+                </span>
+              </a>
             </p>
             <p
               className={
@@ -188,21 +206,21 @@ export default function Home() {
             </p>
             <p className={nunito.className + " mt-4"}>
               AngelHacks BA is a Game Jam organized by people just like you!
-              Come help us out in the
+              Come help us out in the{" "}
               <a
                 href="https://hackclub.slack.com/archives/C051MQSF970"
                 target={"_blank"}
                 rel="noreferrer"
-                className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+                className="link"
               >
                 #angelhacks-ba
-              </a>
-              channel in the
+              </a>{" "}
+              channel in the{" "}
               <a
                 href="https://hackclub.com/slack/"
                 target={"_blank"}
                 rel="noreferrer"
-                className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+                className="link"
               >
                 Hack Club Slack
               </a>
@@ -228,14 +246,34 @@ export default function Home() {
           <div className="space-y-8">
             <FAQCard
               question={"What's AngelHacks & AngelHacks BA?"}
-              answer={`AngelHacks 3.0 is a game jam organized by teenagers @ Hack Club! The official event will be held in Boston, but there will be satellite events (like this one!) running alongside them. These include Bay Area,<a
-			  href="https://angelhacksto.hackclub.com"
-			  target={"_blank"}
-			  rel="noreferrer"
-			  class="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
-			>Toronto</a>, and<a
-			class="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
-		  >LA</a>!`}
+              answer={
+                <>
+                  AngelHacks 3.0 is a game jam organized by teenagers @ Hack
+                  Club! The official event will be held in{" "}
+                  <a
+                    href="https://angelhacks.hackclub.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Boston
+                  </a>
+                  , but there will be satellite events (like this one!) running
+                  alongside them. These include Bay Area,{" "}
+                  <a
+                    href="https://angelhacksto.hackclub.com"
+                    target={"_blank"}
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Toronto
+                  </a>
+                  , and{" "}
+                  {/* <a className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"> */}
+                  LA
+                  {/* </a> */}!
+                </>
+              }
             />
 
             <FAQCard
@@ -246,14 +284,31 @@ export default function Home() {
             />
             <FAQCard
               question={"Where is it taking place?"}
-              answer={"TBD! Stay tuned :D"}
+              answer={
+                <>
+                  AngelHacks BA will be at the Tully Branch Library Community
+                  Room (
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                    href="https://goo.gl/maps/FRfrKTBMkVu2dMww9"
+                  >
+                    880 Tully Rd, San Jose, CA 95111
+                  </a>
+                  ) .
+                </>
+              }
             />
           </div>
           <div className="space-y-8">
             <FAQCard
               question={"How much does it cost?"}
               answer={
-                "It's free! ≧(´▽｀)≦ <br /> We&apos;ll provide food, snacks, and swag at no cost!"
+                <>
+                  It&apos;s free! ≧(´▽｀)≦ <br />
+                  We&apos;ll provide food, snacks, and swag at no cost!
+                </>
               }
             />
             <FAQCard
@@ -265,7 +320,7 @@ export default function Home() {
             <FAQCard
               question={"What can I make?"}
               answer={
-                "Anything about games! It can be a platformer, a Sprig game, a board game, a visual novel, a game about making a game... the possibilities are endless! We&apos;ll have workshops to help you get started, and mentors to help you along the way."
+                "Anything about games! It can be a platformer, a Sprig game, a board game, a visual novel, a game about making a game... the possibilities are endless! We'll have workshops to help you get started, and mentors to help you along the way."
               }
             />
           </div>
@@ -301,30 +356,30 @@ export default function Home() {
               nunito.className + " text-black md:text-2xl text-xl mt-4"
             }
           >
-            No worries! Reach out at
+            No worries! Reach out at{" "}
             <a
               href="mailto:ba@angelhacks.org"
               target={"_blank"}
               rel="noreferrer"
-              className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+              className="link"
             >
               ba@angelhacks.org
             </a>
-            , or send us a message in the
+            , or send us a message in the{" "}
             <a
               href="https://hackclub.slack.com/archives/C051MQSF970"
               target={"_blank"}
               rel="noreferrer"
-              className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+              className="link"
             >
               #angelhacks-ba
-            </a>
-            channel in the
+            </a>{" "}
+            channel in the{" "}
             <a
               href="https://hackclub.com/slack/"
               target={"_blank"}
               rel="noreferrer"
-              className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+              className="link"
             >
               Hack Club Slack
             </a>
@@ -339,23 +394,23 @@ export default function Home() {
         >
           AngelHacks BA is an event crafted by Hack Clubbers.
           <br />
-          Finances open sourced on
+          Finances open sourced on{" "}
           <a
             href="https://bank.hackclub.com/angelhacks-bay-area"
             target={"_blank"}
             rel="noreferrer"
-            className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+            className="link"
           >
             Hack Club Bank
           </a>
-          , and code on
+          , and code on{" "}
           <a
             href="https://github.com/hackclub/angelhacks-ba"
             target={"_blank"}
             rel="noreferrer"
-            className="text-[#c99212] duration-150 hover:bg-opacity-60 hover:bg-[#ffb400] px-2 py-1 rounded-lg hover:text-[#644601] underline decoration-dashed underline-offset-4"
+            className="link"
           >
-            Github
+            GitHub
           </a>
           .
         </div>
