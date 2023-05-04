@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import { Nunito } from "next/font/google";
 import Logo from "../../public/assets/logo.svg";
 import Clouds from "../../public/assets/background/clouds.svg";
@@ -17,36 +18,57 @@ function FAQCard({
   answer: string | JSX.Element;
 }) {
   return (
-    <div className="p-6 bg-opacity-40 border-4 border-[#433b6b]  rounded-xl">
-      <div
-        className={
-          nunito.className +
-          " p-2 text-2xl md:text-3xl rounded-lg font-semibold bg-gray-400 bg-opacity-30 border-2 border-gray-500"
-        }
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 inline-block -mt-1.5"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-          />
-        </svg>
-        <span className="ml-2 font-bold">{question}</span>
-      </div>
+    <>
+      <Head>
+        <title>AngelHacks Bay Area</title>
+        <meta property="og:url" content="ba.angelhacks.org" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="AngelHacks Bay Area" />
+        <meta
+          name="twitter:card"
+          content="A 12 hour game jam for high schoolers in the Bay Area!"
+        />
 
-      <div
-        className={nunito.className + " text-black md:text-2xl text-xl mt-4"}
-      >
-        {answer}
+        <meta
+          property="og:description"
+          content="A 12 hour game jam for middle and high schoolers in the Bay Area!"
+        />
+        <meta
+          property="og:image"
+          content="https://cloud-7hvavwqt6-hack-club-bot.vercel.app/0omgg__1200____630_px_.png"
+        />
+      </Head>
+      <div className="p-6 bg-opacity-40 border-4 border-[#433b6b]  rounded-xl">
+        <div
+          className={
+            nunito.className +
+            " p-2 text-2xl md:text-3xl rounded-lg font-semibold bg-gray-400 bg-opacity-30 border-2 border-gray-500"
+          }
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 inline-block -mt-1.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+          <span className="ml-2 font-bold">{question}</span>
+        </div>
+
+        <div
+          className={nunito.className + " text-black md:text-2xl text-xl mt-4"}
+        >
+          {answer}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default function Home() {
