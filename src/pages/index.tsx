@@ -24,6 +24,7 @@ function FAQCard({
         <meta property="og:url" content="ba.angelhacks.org" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="AngelHacks Bay Area" />
+        <link rel="shortcut icon" href="/assets/logo.svg" />
         <meta
           name="twitter:card"
           content="A 12 hour game jam for high schoolers in the Bay Area!"
