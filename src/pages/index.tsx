@@ -173,7 +173,7 @@ export default function Home() {
                       nunito.className +
                       "  font-extrabold relative text-3xl xs:text-4xl px-12 md:px-24 py-2 bg-[#ffb400] rounded-xl z-20  border-black border-2"
                     }
-                    href="https://airtable.com/shrnolohr2nNQBQ5w"
+                    href="https://forms.gle/6nhqFxKfGA9Rn6sk6"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -203,7 +203,7 @@ export default function Home() {
               <Image src={Joystick} alt="joystick" className="w-28" />
             </div>
 
-            <p className="mt-4">The Rundown</p>
+            <h2 className="mt-4">The Rundown</h2>
           </div>
         </div>
         <br />
@@ -214,7 +214,7 @@ export default function Home() {
             "text-center flex justify-center items-center md:text-2xl text-xl px-4"
           }
         >
-          <div className={nunito.className + " font-semibold md:w-1/2"}>
+          <div className={nunito.className + " font-semibold md:max-w-xl"}>
             <p className={nunito.className}>
               Join us for a day of{" "}
               <span className={nunito.className + "  text-[#c99212]"}>
