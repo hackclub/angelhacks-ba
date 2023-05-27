@@ -4,6 +4,11 @@
       "source": "/register",
       "destination": "https://docs.google.com/forms/d/e/1FAIpQLSfgNcOoUGrkH2M0H7Vt-241JPaiKaBGQwb6EEokBZY4v0TcGQ/viewform",
       "permanent": false
+    },
+    {
+      "source": "/schedule",
+      "destination": "https://docs.google.com/spreadsheets/d/1srMP1vbpzQBW-0_LtCgbjR1JfQVsPJ4hnugJabG8t7A/edit",
+      "permanent": false
     }
   ]
 }
